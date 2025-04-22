@@ -13,7 +13,7 @@ cloudinary.config({
 // Sets up the Multer storage engine with Cloudinary
 export const storage = new CloudinaryStorage({
   cloudinary,
-  params: async (req, file) => {
+  params: async (_req, _file) => {
     return {
       folder: "AscendMarketplace",
       allowed_formats: ["jpeg", "png", "jpg"],

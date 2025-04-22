@@ -1,4 +1,4 @@
-import { Outlet, Link, useLocation } from "react-router-dom";
+import { Outlet, NavLink, Link, useLocation } from "react-router-dom";
 
 export default function Layout() {
   const location = useLocation();
@@ -13,18 +13,20 @@ export default function Layout() {
   return (
     <div>
       <header>
-        <h1>Ascend Marketplace: Buy and Sell Items Locally</h1>
+        <Link to="/">
+          <h1>Ascend Marketplace</h1>
+        </Link>
         <nav>
           {navItems.map(({ path, label }) => (
-            <Link
+            <NavLink
               key={path}
               to={path}
-              className={`hover:underline ${
-                location.pathname === path ? "font-bold underline" : ""
-              }`}
+              className={({ isActive }) =>
+                isActive ? "font-bold underline" : "hover:underline"
+              }
             >
               {label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
       </header>

@@ -9,7 +9,6 @@ type FormData = {
   location: string;
   condition: string;
   sellerId: string;
-  datePosted: string;
 };
 
 const categoryGroups = [
@@ -72,7 +71,6 @@ const NewItemForm = () => {
     location: "",
     condition: "",
     sellerId: "12345", //We have to retrieve sellerId from somewhere - localstorage? useContext? Props?
-    datePosted: new Date().toISOString(),
   });
 
   const handleChange = (
@@ -108,20 +106,30 @@ const NewItemForm = () => {
     data.append("location", formData.location);
     data.append("condition", formData.condition);
     data.append("sellerId", formData.sellerId);
-    data.append("datePosted", formData.datePosted);
 
     formData.images.forEach((image, index) => {
       data.append("images", image);
     });
 
     try {
-      const response = await fetch("/api/listings", {
+      const response = await fetch("http://localhost:3000/api/listings", {
         method: "POST",
         body: data,
       });
 
       const result = await response.json();
       console.log("Submitted listing:", result);
+
+      setFormData({
+        title: "",
+        description: "",
+        category: "",
+        price: 0,
+        images: [],
+        location: "",
+        condition: "",
+        sellerId: "12345",
+      });
     } catch (error) {
       console.error("Failed to submit listing:", error);
     }

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-const Listing = require("../models/listing.schema");
+import Listing from "../models/listing.schema";
 
 //Create Listing Logic
 const createListing = async (req: Request, res: Response) => {

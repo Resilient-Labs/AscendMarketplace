@@ -1,10 +1,10 @@
 import express from "express";
+import multer from "multer";
 import {
   createListing,
   updateListing,
   deleteListing,
 } from "../controllers/listingsController";
-import multer from "multer";
 import { storage } from "../utils/cloudinary";
 
 const upload = multer({ storage });
