@@ -1,0 +1,1 @@
+{"root":["./src/server.ts","./src/controllers/listingscontroller.ts","./src/models/listing.schema.ts","./src/models/userprofile.schema.ts","./src/routes/listings.ts","./src/routes/profile.ts","./src/utils/cloudinary.ts"],"version":"5.8.3"}

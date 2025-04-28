@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import listingsRouter from "./routes/listings";
 import messageRoutes from './routes/messages';
+import profileRoutes from './routes/profile'
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/listings", listingsRouter);
 app.use('/api/messages', messageRoutes);
+app.use('/api/profiles', profileRoutes);
 app.get("/", (_req, res) => {
   res.send("Express + TypeScript Server is running");
 });
