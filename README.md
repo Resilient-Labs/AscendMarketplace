@@ -1,4 +1,7 @@
-#### Ascend Marketplace
+<img width="962" alt="image" src="https://github.com/user-attachments/assets/b0e06dae-278b-45bc-b826-637b10ef5161" />
+
+
+## Ascend Marketplace
 
 Ascend Marketplace is a modern e-commerce application built with React, Vite, and Tailwind CSS. It showcases a product listing and shopping experience in a clean, performant web app. Any one can clone the repositiory, invite users, and begin buying selling and trading in their community. 
 
