@@ -30,13 +30,16 @@ Ascend Marketplace is a modern e-commerce application built with React, Vite, an
 
 ### Project Structure
 
-src/
+```
+  src/
   ├── components/   # Reusable UI components (Navbar, ProductCard, etc.)
   ├── pages/        # Route pages (Home, Products, Profile)
   ├── data/         # Static dummy data for products and users
   ├── App.jsx       # Main application layout and routing
   ├── main.jsx      # React root rendering
   └── index.css     # Tailwind CSS imports and custom styles
+
+```
 
 ### Features
 
