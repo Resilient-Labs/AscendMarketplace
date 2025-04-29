@@ -1,8 +1,6 @@
-import { Outlet, NavLink, Link, } from "react-router-dom";
+import { Outlet, NavLink, Link } from "react-router-dom";
 
 export default function Layout() {
-  // const location = useLocation();
-
   const navItems = [
     { path: "/", label: "Home" },
     { path: "/buy", label: "Buy" },
