@@ -1,5 +1,5 @@
 import express from 'express';
-import UserProfile from '../models/userProfile.schema'; // Make sure this file supports name and email
+import UserProfile from '../models/userProfile.schema'; 
 
 const router = express.Router();
 
@@ -7,7 +7,6 @@ const router = express.Router();
 router.post('/', async (req, res) => {
   console.log('REQ.BODY:', req.body);
   try {
-    // Ensure name and email are required and included
     const { name, email, location, budget, interests, itemsLookingFor } = req.body;
     const newProfile = new UserProfile({
       name,
@@ -40,3 +39,19 @@ router.put('/:id', async (req, res) => {
 });
 
 export default router;
+
+// Get User Favorites by UserID 
+router.get('/:id', async (req, res) => {
+  try {
+    const profile = await UserProfile
+      .findById(req.params.id)
+      .populate('favorites')
+      .exec();
+    if (!profile) {
+      return res.status(404).json({ error: 'Profile not found' });
+    }
+    return res.json(profile);
+  } catch (err) {
+    return res.status(400).json({ error: (err as Error).message });
+  }
+});

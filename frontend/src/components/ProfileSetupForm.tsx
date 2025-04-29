@@ -2,12 +2,14 @@ import { useState } from "react";
 import axios from "axios";
 
 interface UserProfile {
+  _id?: string; 
   name: string;
   email: string;
   location: string;
   budget: number;
   interests: string[];
   itemsLookingFor: string[];
+  favorites: string[];
 }
 
 const emptyProfile: UserProfile = {
@@ -16,11 +18,12 @@ const emptyProfile: UserProfile = {
   location: "",
   budget: 0,
   interests: [],
-  itemsLookingFor: [],
+  itemsLookingFor: []
 };
 
 const ProfileSetupForm = () => {
   const [profile, setProfile] = useState<UserProfile>(emptyProfile);
+  const [savedProfile, setSavedProfile] = useState<UserProfile | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -33,8 +36,9 @@ const ProfileSetupForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/profiles", profile);
-      setProfile(emptyProfile); // Reset the form after submission
+      const response = await axios.post('http://localhost:3000/api/profiles', profile);
+      console.log('Profile saved:', response.data);
+      setProfile(emptyProfile);
     } catch (error) {
       console.error("Error saving profile:", error);
     }
@@ -43,45 +47,61 @@ const ProfileSetupForm = () => {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <div>
-        <label htmlFor="name">Name</label>
-        <input id="name" name="name" value={profile.name} onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input id="email" name="email" type="email" value={profile.email} onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="location">Location</label>
-        <input id="location" name="location" value={profile.location} onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="budget">Budget</label>
+        <label>Name</label>
         <input
-          id="budget"
+          name="name"
+          value={profile.name}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div>
+        <label>Email</label>
+        <input
+          name="email"
+          type="email"
+          value={profile.email}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div>
+        <label>Location</label>
+        <input
+          name="location"
+          value={profile.location}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div>
+        <label>Budget</label>
+        <input
           name="budget"
           type="number"
           value={profile.budget}
           onChange={handleChange}
         />
       </div>
+
       <div>
-        <label htmlFor="interests">Interests (comma separated)</label>
+        <label>Interests (comma separated)</label>
         <input
-          id="interests"
           name="interests"
-          value={profile.interests.join(", ")}
-          onChange={handleChange}
+          value={profile.interests.join(', ')}
+          onChange={(e) => handleArrayChange(e, 'interests')}
         />
       </div>
+
       <div>
-        <label htmlFor="itemsLookingFor">Items Looking For (comma separated)</label>
+        <label>Items Looking For (comma separated)</label>
         <input
-          id="itemsLookingFor"
           name="itemsLookingFor"
-          value={profile.itemsLookingFor.join(", ")}
-          onChange={handleChange}
+          value={profile.itemsLookingFor.join(', ')}
+          onChange={(e) => handleArrayChange(e, 'itemsLookingFor')}
         />
       </div>
+
       <button type="submit" className="bg-blue-500 text-white py-2 rounded">
         Save Profile
       </button>
