@@ -1,9 +1,10 @@
 import { FC } from "react";
+import HomePage from "../components/Homepage";
 
 const Home: FC = () => {
   return (
     <main>
-      <h2>Home Page</h2>
+      <HomePage />
     </main>
   );
 };

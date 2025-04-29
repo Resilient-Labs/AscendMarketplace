@@ -1,0 +1,71 @@
+
+.page-container {
+    padding: 2rem;
+    background: linear-gradient(to right, #f9fafb, #e3f2fd);
+    min-height: 100vh;
+  }
+  
+  .section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #1976d2;
+  }
+  .item-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .item-card:hover {
+    transform: scale(1.03);
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .item-card {
+    background-color: #ffffff;
+    border: 2px solid #f8bbd0;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .item-card:hover {
+    transform: scale(1.05);
+    background-color: #fffdfe;
+  }
+  
+  .item-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d81b60;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-description {
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .item-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+  }
+  
