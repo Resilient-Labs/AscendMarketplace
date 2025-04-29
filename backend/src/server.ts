@@ -4,6 +4,8 @@ import cors from "cors";
 import listingsRouter from "./routes/listings";
 import profileRoutes from "./routes/profile";
 import { connectToDB } from "./config/db";  
+import messageRoutes from './routes/messages';
+
 
 // Load environment variables
 dotenv.config();
@@ -23,6 +25,7 @@ connectToDB();
 // Routes
 app.use("/api/listings", listingsRouter);
 app.use("/api/profiles", profileRoutes);
+app.use('/api/messages', messageRoutes);
 
 app.get("/", (_req, res) => {
   res.send("Express + TypeScript Server is running");
