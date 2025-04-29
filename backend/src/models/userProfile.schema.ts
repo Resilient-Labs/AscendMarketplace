@@ -7,6 +7,7 @@ interface IUserProfile extends Document {
   budget: number;
   interests: string[];
   itemsLookingFor: string[];
+  favorites: mongoose.Types.ObjectId[]; 
 }
 
 const UserProfileSchema: Schema = new Schema({
@@ -15,7 +16,10 @@ const UserProfileSchema: Schema = new Schema({
   location: { type: String },
   budget: { type: Number, required: true },
   interests: { type: [String], default: [] },
-  itemsLookingFor: { type: [String], default: [] }
+  itemsLookingFor: { type: [String], default: [] },
+  favorites: [
+    { type: Schema.Types.ObjectId, ref: 'Listing' }
+  ],
 });
 
 const UserProfile = mongoose.model<IUserProfile>('UserProfile', UserProfileSchema);
