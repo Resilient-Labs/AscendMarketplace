@@ -1,0 +1,104 @@
+[33mcommit d89bd7e26b133ddf07f731d39e3f5bbf5e5b37a8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/feature/add-frontend-testing[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mfeature/add-frontend-testing[m[33m)[m
+Author: Sxnny-s <ethsok@protonmail.com>
+Date:   Tue Apr 29 00:05:31 2025 -0400
+
+    git commit -m "added testing for front end "
+
+[33mcommit 8051732c31d0c0c6611f1124229c22bf495b6cac[m
+Author: Kaia Walters <kaia.cwalters@gmail.com>
+Date:   Mon Apr 28 16:22:33 2025 -0400
+
+    Update README.md
+
+[33mcommit 331e3d08e54c8d75e84178aaa3872511c9bbfb24[m
+Author: Kaia Walters <kaia.cwalters@gmail.com>
+Date:   Mon Apr 28 16:02:55 2025 -0400
+
+    Update README.md
+
+[33mcommit a4d7fb4db112faa501e74298cb297bbc9aa52a7d[m
+Author: Kaia Walters <kaia.cwalters@gmail.com>
+Date:   Mon Apr 28 16:02:13 2025 -0400
+
+    Update README.md First draft
+
+[33mcommit f7752b65bb1b59c0abc84d786756487d3c501ea2[m
+Author: Zaria Hallager <120356303+ZariaHallager@users.noreply.github.com>
+Date:   Mon Apr 28 13:55:57 2025 -0400
+
+    add direct messaging routes and model. Issue #13 (#23)
+
+[33mcommit 941a27afa902097f228344f2c44dc4cf168dfcf4[m
+Author: Kaniah <54380609+KaniahDunn@users.noreply.github.com>
+Date:   Mon Apr 28 01:04:42 2025 -0400
+
+    Start User Profile form & API #6 (#24)
+    
+    Done
+    with typed fields:
+    location
+    budget
+    interests (e.g., cat, kitchen gear)
+    items you're looking for
+    add & update routes
+
+[33mcommit 5e22a416554de26d9f8df86126152d5c957e3764[m
+Author: Kerlin Augustin <102834611+Kerlin-Augustin@users.noreply.github.com>
+Date:   Sat Apr 26 17:11:26 2025 -0400
+
+    MongoDB Connection (#22)
+    
+    * new branch with all changes
+    
+    * ignore .env
+
+[33mcommit e51d8083aae78593e200de1e6e4a5768bb5f3714[m
+Author: Amaury Silverio <76449195+AmaurySilverio@users.noreply.github.com>
+Date:   Wed Apr 23 09:00:45 2025 -0400
+
+    create sell item form 'newItemForm' in frontend and backend route iss… (#19)
+    
+    * create sell item form 'newItemForm' in frontend and backend route issue #7
+    
+    * finished ticket
+
+[33mcommit 5e547301330622eb9a340c0723dbd732d01aff74[m
+Merge: bcf130a d9a4ddf
+Author: Dunia <duniaimara@gmail.com>
+Date:   Tue Apr 15 22:28:36 2025 -0400
+
+    Merge pull request #18 from Resilient-Labs/issue_1
+    
+    Sets up project using Vite + React + TypeScript in frontend, Express + Typescript Backend
+    includes running scripts in package.json
+    Sets up Home component with react routes in nav with pages for Profile, Sell, Buy
+
+[33mcommit d9a4ddff95b6ba861845f426b00dda807f98ed76[m[33m ([m[1;31morigin/issue_1[m[33m)[m
+Author: Sebastian Vivas <seb.vivas.dev@gmail.com>
+Date:   Tue Apr 15 20:36:35 2025 -0400
+
+    Added ESLint to backend
+
+[33mcommit a0249952643e401622540a87d824106e2a907277[m
+Author: Sebastian Vivas <seb.vivas.dev@gmail.com>
+Date:   Mon Apr 14 23:01:44 2025 -0400
+
+    Update backend pkg json
+
+[33mcommit 16c725acc57fc7d3b96f15d70050d6813dab2289[m
+Author: Sebastian Vivas <seb.vivas.dev@gmail.com>
+Date:   Mon Apr 14 23:01:00 2025 -0400
+
+    Update backend pkg json
+
+[33mcommit 78c46119347605c7325fcf09e584663e418ade36[m
+Author: Sebastian Vivas <seb.vivas.dev@gmail.com>
+Date:   Mon Apr 14 19:54:29 2025 -0400
+
+    Issue_1
+
+[33mcommit bcf130aa93309a7b4eb407a72b68e24cd6145d89[m
+Author: Erica Mendez <ecmendez25@gmail.com>
+Date:   Mon Apr 14 10:03:53 2025 -0400
+
+    Initial commit
