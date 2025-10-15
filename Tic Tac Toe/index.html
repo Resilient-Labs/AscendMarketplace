@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zaria's Dream Builders</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #f8f9fa, #e0e7ff);
+        color: #333;
+        padding: 20px;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 750px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container:hover {
+        transform: scale(1.02);
+      }
+
+      .container:before,
+      .container:after {
+        content: "";
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        background-color: #ff69b4;
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      .container:before {
+        top: -100px;
+        left: -100px;
+        background-color: rgba(255, 105, 180, 0.3);
+      }
+
+      .container:after {
+        bottom: -100px;
+        right: -100px;
+        background-color: rgba(255, 105, 180, 0.5);
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff69b4;
+        margin-bottom: 30px;
+        font-size: 34px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff69b4;
+        margin-bottom: 30px;
+        font-size: 34px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      p {
+        text-align: center;
+        color: #ff69b4;
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      label {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 8px;
+        display: block;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      label:hover {
+        color: #ff69b4;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0 20px 0;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        font-size: 16px;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        border-color: #ff69b4;
+        box-shadow: 0 0 8px rgba(255, 105, 180, 0.3);
+        outline: none;
+      }
+
+      textarea {
+        height: 120px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 15px 20px;
+        font-size: 18px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        display: block;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #ff3e9d;
+        transform: scale(1.05);
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+      }
+
+      .fun-section {
+        margin: 20px 0;
+        background-color: #fff0f6;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+      }
+
+      .fun-section:hover {
+        background-color: #ff69b4;
+        color: white;
+      }
+
+      .fun-section h2 {
+        font-size: 24px;
+        color: #ff69b4;
+        transition: color 0.3s ease;
+      }
+
+      .fun-section p {
+        font-size: 16px;
+        color: #333;
+      }
+
+      .fun-section a {
+        color: white;
+        background-color: #ff69b4;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .fun-section:hover h2 {
+        color: white;
+      }
+
+      .fun-section a:hover {
+        background-color: #ff3e9d;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+          padding: 10px;
+          font-size: 14px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        .fun-section h2 {
+          font-size: 22px;
+        }
+
+        .fun-section a {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 24px;
+        }
+
+        label {
+          font-size: 14px;
+        }
+
+        input,
+        select,
+        textarea {
+          font-size: 14px;
+        }
+
+        input[type="submit"] {
+          padding: 12px;
+          font-size: 16px;
+        }
+
+        .fun-section {
+          padding: 20px;
+        }
+
+        .fun-section h2 {
+          font-size: 20px;
+        }
+
+        .fun-section a {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Zaria's Dream Builders: Crafting Tailored Solutions for Your Projects
+      </h1>
+
+      <p>"Transforming your ideas into reality, one project at a time!"</p>
+
+      <form
+        id="intakeForm"
+        action="https://formspree.io/f/xbljrlqd"
+        method="post"
+      >
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="Full Name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company/Business Name (if applicable)</label>
+          <input
+            type="text"
+            id="company"
+            name="Company"
+            placeholder="Enter your company name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="Email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="Phone"
+            placeholder="Enter your phone number"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="website">Website (if applicable)</label>
+          <input
+            type=""
+            id="website"
+            name="Website"
+            placeholder="Enter your website URL"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="services">What services are you interested in?</label>
+          <select id="services" name="Services" required>
+            <option value="" disabled selected hidden>
+              Please select an option
+            </option>
+            <option value="Custom Website Development">
+              Custom Website Development
+            </option>
+            <option value="Mobile App Development">
+              Mobile App Development
+            </option>
+            <option value="API Integration">API Integration</option>
+            <option value="E-commerce Solutions">E-commerce Solutions</option>
+            <option value="Database Design & Optimization">
+              Database Design & Optimization
+            </option>
+            <option value="Website Redesign">Website Redesign</option>
+            <option value="Performance & Security Optimization">
+              Performance & Security Optimization
+            </option>
+            <option value="Bug Fixes & Troubleshooting">
+              Bug Fixes & Troubleshooting
+            </option>
+            <option value="SEO Services">SEO Services</option>
+            <option value="Social Media Management">
+              Social Media Management
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="projectDesc">Project Description</label>
+          <textarea
+            id="projectDesc"
+            name="Project Description"
+            placeholder="Briefly describe your project..."
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="goal">What is the primary goal of this project?</label>
+          <select id="goal" name="Project Goal" required>
+            <option value="" disabled selected hidden>
+              Please select an option
+            </option>
+            <option value="Generate more leads">Generate more leads</option>
+            <option value="Increase sales">Increase sales</option>
+            <option value="Enhance user experience">
+              Enhance user experience
+            </option>
+            <option value="Improve internal processes">
+              Improve internal processes
+            </option>
+            <option value="Increase brand awareness">
+              Increase brand awareness
+            </option>
+            <option value="Streamline operations">Streamline operations</option>
+            <option value="Boost online presence">Boost online presence</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="timeline">What is your timeline for this project?</label>
+          <select id="timeline" name="Timeline" required>
+            <option value="" disabled selected hidden>
+              Please select an option
+            </option>
+            <option value="Immediately">Immediately</option>
+            <option value="Within a month">Within a month</option>
+            <option value="Within 3 months">Within 3 months</option>
+            <option value="More than 3 months">More than 3 months</option>
+            <option value="More than 6 months">More than 6 months</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="budget">What is your budget range?</label>
+          <input
+            type="text"
+            id="budget"
+            name="Budget"
+            placeholder="Enter your budget range"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="additionalInfo"
+            >Additional Information or Special Requests</label
+          >
+          <textarea
+            id="additionalInfo"
+            name="Additional Information"
+            placeholder="Anything else you'd like to share?"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Let's Chat Section -->
+        <div class="fun-section">
+          <h2>Let’s Chat!</h2>
+          <p>
+            Ready to bring your project to life? Feel free to book your
+            consultation call with me here:
+          </p>
+          <a href="https://calendly.com/zariahallager" target="_blank"
+            >Book a Call Now 🎉</a
+          >
+        </div>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        const form = document.getElementById("intakeForm");
+        const inputs = form.querySelectorAll(
+          "input[required], select[required], textarea[required]"
+        );
+        for (let input of inputs) {
+          if (!input.value) {
+            alert("Please fill out all required fields.");
+            return false;
+          }
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
