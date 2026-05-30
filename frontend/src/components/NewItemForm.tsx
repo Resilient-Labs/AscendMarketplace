@@ -107,7 +107,7 @@ const NewItemForm = () => {
     data.append("condition", formData.condition);
     data.append("sellerId", formData.sellerId);
 
-    formData.images.forEach((image, index) => {
+    formData.images.forEach((image) => {
       data.append("images", image);
     });
 
